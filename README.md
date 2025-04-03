@@ -1,10 +1,10 @@
-#PÁGINA WEB PARA AGENCIA DE VIAJES PRIVADOS
+# PÁGINA WEB PARA AGENCIA DE VIAJES PRIVADOS
 
-##Descripción
+## Descripción
 
 El actual trabajo se desarrolló para la empresa de remisería...
 
-##Organización
+## Organización
 
 Se utilizan oinfdalknsakmasdos
 
@@ -15,9 +15,9 @@ main/
   ├img/
   └pdf/
 
-##index.html
+## index.html
 > Archivo principal
 
 
-##styles.css
+## styles.css
 > Para que quede requete cheto
