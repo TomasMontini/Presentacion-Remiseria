@@ -8,12 +8,14 @@ El actual trabajo se desarrolló para la empresa de remisería...
 
 Se utilizan oinfdalknsakmasdos
 
+```bash
 main/
-├index.html
-├styles.css
-└resources
+├ index.html
+├ styles.css
+└ resources
   ├img/
   └pdf/
+```
 
 ## index.html
 > Archivo principal
