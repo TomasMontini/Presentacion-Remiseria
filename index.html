@@ -2,9 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport">
     <title>pagina web proyecto</title>
 <style>
+html{
+scroll-behavior:smooth;
+}
 body{
 	padding:0px;
 	margin:0px;
@@ -19,7 +22,11 @@ body{
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	z-index:2;
+	z-index:3;
+}
+a{
+	color:#fff;
+	text-decoration:none;
 }
 .opciones{
 	position: sticky;
@@ -56,41 +63,57 @@ body{
 	position:sticky;
 	width:500px;
 	height:500px;
-	background:red;
-	top:51%;
+	//background:red;
+	top:54%;
 	left:20%;
 	transform:translate(-50%,-50%);
-	z-index:3;
+	z-index:4;
 	border-radius:20%;
 }
 #titulo{
 	position:sticky;
-	top:20%;
+	top:25%;
 	left:20%;
 	animation-timeline: scroll();
 	animation-name: titulomove;
-	z-index:2;
+	z-index:3;
 	color:white;
 }
 @keyframes moveLogo{
 0%	{	transform:translate(-50%,-50%);}
-50%,100%{	top:30px;
+30%,100%{	top:30px;
 		left:40px;
 		transform:translate(-50%,-50%);
 		width:50px;
 		height:50px;
 		border-radius:50%;
+		filter:none;
 	}
 }
 @keyframes titulomove{
 0%	{	transform:translate(-50%,-50%);
 	}
-50%,100%{
+30%,100%{
 		top:45px;
 		left:100px;
 		transform:translate(-50%,-50%);
 		width:50px;
 		height:50px;
+		filter:none;
+		
+	}
+}
+#imgLogo{
+	animation-timeline: scroll();
+	animation-name: sombra;
+}
+@keyframes sombra{
+0%	{	
+	}
+45%,100%{
+		
+		filter:none;
+		
 	}
 }
 #description{
@@ -127,50 +150,191 @@ body{
 	z-index:0;
 	top:100%;
 }
-.recuadro{
-	background:#0d1520;
+#estampa3{
 	position:absolute;
-	top:150%;
-	left:50%;
-	width:600px;
+	width:100%;
+	height:100%;
+	background:#0d1520;
+	z-index:0;
+	top:200%;
+}
+.recuadro{
+	
+	position:absolute;
+	
+	width:670px;
 	height:300px;
 	transform:translate(-50%,-50%);
 	z-index:1;
 }
 #recuadro1{
-left:-20%;
+top:150%;
+background:#0d1520;
 animation-timeline: scroll();
 	animation-name: block1;
 }
+#recuadro1:hover{
+	position:absolute;
+	top:150%;
+	left:100%;
+	transform:translate(-24%,-50%);
+	width:1340px;
+	height:500px;
+	transition:2s;
+	z-index:2;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+#img1{
+	animation-timeline: scroll();
+	animation-name: aparece;
+}
+#img2{
+	animation-timeline: scroll();
+	animation-name: aparece2;
+}
 @keyframes block1{
 0%,20%{left:-20%;}
-50%,100%{left:20%;}
+40%,100%{left:24%;}
+}
+@keyframes aparece{
+0%,20%{opacity:0;}
+40%,100%{opacity:1;}
 }
 #recuadro2{
 left:120%;
+top:150%;
+background:#0d1520;
 animation-timeline: scroll();
 	animation-name: block2;
 }
+#recuadro2:hover{
+	position:absolute;
+	top:150%;
+	transform:translate(-76%,-50%);
+	width:1340px;
+	height:500px;
+	transition:2s;
+	z-index:2;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+}
 @keyframes block2{
 0%,20%{left:120%;}
-50%,100%{left:80%;}
+40%,100%{left:75%;}
 }
+#recuadro3{
+left:-20%;
+top:250%;
+background:#15202e;
+animation-timeline: scroll();
+	animation-name: block3;
+}
+#recuadro3:hover{
+	position:absolute;
+	top:250%;
+	left:100%;
+	transform:translate(-24%,-50%);
+	width:1340px;
+	height:500px;
+	transition:2s;
+	z-index:2;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+@keyframes aparece2{
+0%,60%{opacity:0;}
+80%,100%{opacity:1;}
+}
+@keyframes block3{
+0%,50%{left:-20%;}
+80%,100%{left:24%;}
+}
+#recuadro4{
+left:120%;
+top:250%;
+background:#15202e;
+animation-timeline: scroll();
+	animation-name: block4;
+}
+#recuadro4:hover{
+	position:absolute;
+	top:250%;
+	transform:translate(-76%,-50%);
+	width:1340px;
+	height:500px;
+	transition:2s;
+	z-index:2;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+@keyframes block4{
+0%,50%{left:120%;}
+80%,100%{left:75%;}
+}
+#estampa4{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#15202e;
+	z-index:0;
+	top:300%;
+	//border:solid 1px black;
+}
+#card-contact{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background:rgba(255,255,255,0.1);
+	width:800px;
+	height:400px;
+	border :solid 1px white;
+	border-radius:25px;
+	display:flex;
+	align-items:start;
+	justify-content:start;
+	box-shadow: #1c2d46 0px 30px 90px;
+	}
+	.data{
+		margin:10px;
+		position:relative;
+		background:rgba(255,255,255,0.1);
+		width:300px;
+		height:380px;	
+		border :solid 1px white;
+		border-radius:25px;
+	}
 </style>
 </head>
 <body>
 	<div id="top">
-		<div class="opciones" >Inicio</div>
-		<div class="opciones" >Moviles</div>
-		<div class="opciones" >Contactanos</div>
+		<div class="opciones" ><a href="#estampa1" style="font-family: Arial, Times, sans-serif;">Inicio</a></div>
+		<div class="opciones" ><a href="#estampa2" style="font-family: Arial, Times, sans-serif;">Moviles</a></div>
+		<div class="opciones" ><a href="#estampa4" style="font-family: Arial, Times, sans-serif;">Contactanos</div>
 	</div>
-	
-	<div id="logo"></div><div id="titulo">Remiseria</div>
-	<div id="description"></div>
 	<div id="estampa1"></div>
-	<div id="recuadro1" class="recuadro"></div>
-	<div id="recuadro2" class="recuadro"></div>
-	<div id="estampa2"></div>
+	<div id="description"></div>
+	<div id="logo"><img  id="imgLogo" src="https://pbs.twimg.com/profile_images/1320728174305705984/y2dW8Bji_400x400.jpg" style="border-radius:25%;width:100%;height:100%;position:relative;left:50%;top:50%;transform:translate(-50%,-50%);filter: drop-shadow(0 0 0.75rem white);"></div></div>
+	<div id="titulo" style="font-family: Arial, Times, sans-serif;">Remiseria</div>
 	
+	<div id="estampa2"></div>
+	<div id="recuadro1" class="recuadro"><img id="img1" src="https://remiseriamalvinas.com.ar/wp-content/uploads/2021/09/kisspng-volkswagen-voyage-car-volkswagen-gol-volkswagen-po-taxi-5ad5c90e2b7276.826420451523960078178.png" style="width:30rem;heigt:10rem;transform:translate(20%,10%);filter: drop-shadow(0 0 0.75rem white);"></div>
+	<div id="recuadro2" class="recuadro"><img id="img1" src="https://auraexpress.com.ar/wp-content/uploads/2024/12/fiat_cronos-_2_-1.webp" style="width:25rem;heigt:10rem;transform:translate(20%,5%);filter: drop-shadow(0 0 0.75rem white);"></div>
+	<div id="estampa3"></div>
+	<div id="recuadro3" class="recuadro"><img id="img2" src="https://www.remisesjuarez.com.ar/institucional/assets/img/devices/flota.png" style="width:30rem;heigt:10rem;transform:translate(20%,-5%);filter: drop-shadow(0 0 0.75rem white);"></div>
+	<div id="recuadro4" class="recuadro"><img id="img2" src="https://res.cloudinary.com/derentas/image/upload/q_auto,f_auto/v1731345651/production/Assets%20staticts%20pages/o5g1rwsy7ti5svdmzerb.png" style="width:25rem;heigt:10rem;transform:translate(20%,10%);filter: drop-shadow(0 0 0.75rem white);"></div>
+	<div id="estampa4">
+		<div id="card-contact">
+			<div class="data" ></div>
+			<div class="data" ></div>
+			<div class="data" ></div>
+		</div>
+	</div>
 </body>
 <script>
 
